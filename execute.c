@@ -14,6 +14,11 @@ void execute(void)
 	data.opcode = strtok(data.line, " \n\t");
 	data.arg = strtok(NULL, " \n\t");
 
+	if (!data.opcode || data.opcode[0] == '#')
+	{
+		return;
+	}	
+
 	for (i = 0; instructions[i].opcode; i++)
 	{
 		if (strcmp(data.opcode, instructions[i].opcode) == 0)
