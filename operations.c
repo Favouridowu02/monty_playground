@@ -46,3 +46,17 @@ void op_pall(stack_t **stack, unsigned int line_number)
 		top = top->prev;
 	}
 }
+
+void op_pint(stack_t **stack, unsigned int line_number)
+{
+	stack_t *top = getTopOfStack(stack);
+
+	if (top)
+	{
+		printf("%d\n", top->n);
+	}
+	else
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty", line_number);
+	}
+}

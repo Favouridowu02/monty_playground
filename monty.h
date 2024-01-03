@@ -53,4 +53,5 @@ int isINT(char *s);
 stack_t *getTopOfStack(stack_t **stack);
 void op_push(stack_t **stack, unsigned int line_number);
 void op_pall(stack_t **stack, unsigned int line_number);
+void op_pint(stack_t **stack, unsigned int line_number);
 #endif
